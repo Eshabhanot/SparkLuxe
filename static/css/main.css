@@ -1,0 +1,103 @@
+body{
+
+    background-color: #f7f9fB ;
+}
+
+    /* Navbar background color -> main.html */
+    .bg-color-class{
+        /* background-color: #8FC1E3; */
+        background-color: #f4e3e3;
+    }
+
+    /* Navbar styling */
+    .nav-link,  .navbar-brand {
+        color:rgb(32, 40, 40)!important;
+        font-family:  Inter;
+        font-size: 21px;
+    }
+
+    .nav-link:hover{
+        color: black;
+        background-color: #e6ebf0 ;
+        /* text-decoration: underline; */
+        /* text-shadow: 5px 5px 10px #7979c6; */
+        /* font-size: 130%; */
+
+    }
+
+    /* Button Color - filter, productpage,home */
+
+    .bg-color-btn{
+        background-color: #f4e3e3;
+        font-family:  Inter;
+        font-size: 19px;
+    }
+
+    .bg-color-btn:hover{
+        background-color: #7979c6;
+        color: white;
+    }
+    
+    form .bg-color-btn{
+        border: 1px solid black;
+    }
+
+    .nav-class-new{
+        background-color: #f4e3e3;
+        padding: 5px;
+    }
+
+    /* Navbar icon size - main.html */
+    .icon_navbar{
+        /* width:"25";
+        height:"0"; */
+        font-size: 2.1rem;
+    }
+
+
+    .container2{
+      max-width : 1550px;
+      margin-top: 20px;
+    }
+
+    /* Navbar Cart count */
+    #cart-total{
+        text-align: start;
+        color: white;
+        background-color: rgb(252, 63, 63);
+        /* width: 55px;
+        height: 55px; */
+        border-radius: 50%;
+        font-size: 14px;
+        padding: 3px;
+        top: -23px;
+        left: -2px;
+        position: relative;
+    }
+
+
+/* Filter Button  */
+.filter-btn{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 700;
+    background: #f4e3e3;
+    color: #434343;
+    /* width: 200px; */
+    margin-bottom: 5px;
+    border: 1px solid #f4e3e3;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+}
+.filter-btn:active{
+    background: white;
+    color: black;
+  }
+
+.col-md-8{
+    background-color: rgb(243, 219, 223);
+}
+
+.text-reset{
+    text-decoration: none;
+}

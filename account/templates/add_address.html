@@ -1,0 +1,61 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container container2 mb-4">
+            <div class="row mx-0 justify-content-center">
+              <div class="col-md-7 col-lg-5 px-lg-2 col-xl-4 px-xl-0 px-xxl-3 ">
+               
+                <form method="POST" class="w-100 rounded-1 p-4 border bg-white">
+                {% csrf_token %}
+                <span style="color: red; font-weight: 600;">{{error}}</span>
+                  <label class="d-block mb-4">
+                    <span class="form-label d-block">Your name</span>
+                    <input name="name" type="text" class="form-control" pattern="[A-Za-z ]{3,}"  required>
+                  </label>
+
+                  <label class="d-block mb-4">
+                    <span class="form-label d-block">Telephone</span>
+                    <input name="telephone" type="tel" class="form-control" placeholder="" pattern="[0-9]{10}" title="Enter a 10 digit phone no." required>
+                  </label>
+          
+                  <label class="d-block mb-4">
+                    <span class="form-label d-block">Address</span>
+                    <input name="address" type="text" class="form-control" placeholder=""  required>
+                  </label>
+          
+                  <label class="d-block mb-4">
+                    <span class="form-label d-block">City</span>
+                    <input name="city" type="text" class="form-control" placeholder="" pattern="[A-Za-z ]{3,}" required>
+                  </label>
+          
+                  <label class="d-block mb-4">
+                    <span class="form-label d-block">State/Province</span>
+                    <input name="state" type="text" class="form-control" placeholder="" pattern="[A-Za-z ]{3,}" minlength="3"  required>
+                  </label>
+          
+                  <label class="d-block mb-4">
+                    <span class="form-label d-block">Zip/Postal code</span>
+                    <input name="zip" type="text" class="form-control" placeholder="" pattern="[0-9]{6}"  required>
+                  </label>
+          
+                  <label class="d-block mb-4">
+                    <span class="form-label d-block">Country</span>
+                    <input name="country" type="text" class="form-control" placeholder="India" value="India"  disabled>
+                  </label>
+          
+                  <div class="mb-3"> 
+                    <button type="submit" class="btn btn-primary px-3 rounded-3"> Save </button>
+                  </div>
+          
+                  <div class="d-block text-end">
+                   
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        
+    </div>
+</div>
+{% endblock %}

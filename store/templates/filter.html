@@ -1,0 +1,64 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="container container2">
+    <div class="row mb-5">
+      <!-- <div class="col-2  ">
+      </div> -->
+      <!-- Filter block -->
+      <div class="col-md-2  ">
+        <h2 class="pt-3">Filters</h2>
+        <hr>
+        <h3>Prices</h3>
+        <ul style="list-style: none;">
+          <li><form>{% if searchpage %}<input type="text" name="q" hidden value="{{searchpage}}">{% endif %}<input type="text" name="price" hidden  value="0-499" id=""><button class="filter-btn" type="submit">Rs. 0 to Rs. 500</button></form></li>
+          <li><form>{% if searchpage %}<input type="text" name="q" hidden value="{{searchpage}}">{% endif %}<input type="text" name="price" hidden  value="500-1499" id=""><button class="filter-btn" type="submit">Rs. 500 to Rs. 1500</button></form></li>
+          <li><form>{% if searchpage %}<input type="text" name="q" hidden value="{{searchpage}}">{% endif %}<input type="text" name="price" hidden  value="1500-2499" id=""><button class="filter-btn" type="submit">Rs. 1500 to Rs. 2499</button></form></li>
+          <li><form>{% if searchpage %}<input type="text" name="q" hidden value="{{searchpage}}">{% endif %}<input type="text" name="price" hidden  value="2500-3499" id=""><button class="filter-btn" type="submit">Rs. 2500 to Rs. 3499</button></form></li>
+          <li><form>{% if searchpage %}<input type="text" name="q" hidden value="{{searchpage}}">{% endif %}<input type="text" name="price" hidden  value="3500-10000" id=""><button class="filter-btn" type="submit">Rs. 3500 to 10000</button></form></li>
+        </ul>
+
+      </div>
+
+      <!-- Products block -->
+      <div class="col-md-10 ">
+       
+        <div class="row g-3">
+
+          {% for p in product_data %}
+            <div class="col-md-6 col-lg-4 col-xs-2 ">
+              <div class="card" style=" height: 660px;">
+                <img src="{% static p.image %}"  class="card-img-top" alt="..." style="height: 400px !important;">
+                <div class="card-body">
+                  <h5 class="card-title">{{ p.title }}</h5>
+                  <p class="card-text">{{ p.description | truncatechars:95 }}</p>
+                  {% if p.price == p.selling_price %}
+                  <p>
+                    <h4 class="py-3"> &#x20B9 {{ p.price }} </h4></p>
+         
+                  {% else %}
+                    <p><h5> &#x20B9 <del>{{ p.price }} </del></h5>
+                    <h4> &#x20B9 {{ p.selling_price }} </h4></p>
+                  {% endif %}
+                  <a href={% url 'add-to-cart' p.id %} type="button" class="btn bg-color-btn">Add to Cart</a>
+                  <a href="{{p.get_absolute_url}}" class="btn bg-color-btn">View</a>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+
+        </div>
+
+ 
+
+      </div>
+    </div>
+
+
+</div>
+
+{% endblock %}
+

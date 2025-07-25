@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container container2 p-5">
+    <div class="row text-center p-5 my-3">
+        <h3><i class="bi bi-bag-check"></i></h3>
+        <h2> Thank you!<g2>
+            <h5> Your Order Has been Placed. </h5>
+            <!-- <p> Order Id - {{order}} </p> -->
+            <p class="text-muted" style="font-size: 20px;"> <br>Your order number is {{order.first.order.transaction_id}}. <br>We will immediatelly process your and it will be delivered in 7 - 10 business days.</p>
+            <hr>
+            <a href="{% url 'home' %}" class="btn btn-dark"> Home Page</a>
+    </div>
+
+</div>
+{% endblock %}

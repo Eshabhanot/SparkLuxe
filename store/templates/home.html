@@ -1,0 +1,259 @@
+{% extends "main.html" %}
+{% load static %}
+
+{% block content %}
+
+  <!-- Carousel -->
+  <div class="container-fluid px-0 ">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'images/finalhomepage7.jpg' %}" width="1900" height="710" class="d-block w-100" alt="...">
+          {% comment %} <img src='https://source.unsplash.com/1920x700/?perfume/orientation=landscape' idth="1800" height="710"  class="d-block w-100" alt="..."> {% endcomment %}
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+        
+        <div class="carousel-item">
+          {% comment %} <img src='{% static "images/bag1.jpg" %}' width="1900" height="710"  class="d-block w-100" alt="..." > {% endcomment %}
+          <img src='{% static "images/finalhomepage8.jpg" %}' width="1900" height="710"  class="d-block w-100" alt="..." >
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          {% comment %} <img src='{% static "images/shoes_cate.jpg" %}' idth="1800" height="710"  class="d-block w-100" alt="..."> {% endcomment %}
+          <img src='{% static "images/Fre_company.jpg" %}' width="1700" height="710"  class="d-block w-100" alt="...">
+          <!-- "https://source.unsplash.com/1920x700/?sneakers/orientation=landscape" -->
+          <div class="carousel-caption d-none d-md-block">
+          </div>
+        </div>
+      </div>
+      
+    
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>'
+  </div>
+
+  <!-- Product -->
+  
+  <div class="container my-5 ">
+    <h2 class="my-3 text-center my-2" style="font-size: 20px;color:rgb(246, 149, 165)">SHOP BY CATEGORIES</h2>
+    <h2 class="my-3 text-center my-2" style="font-size: 70px;"><b>Popular Categories</b></h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+
+        <div class="col-md-6 my-5">
+            <div class="card shadow-sm">
+            <a href="{% url 'filter' 'bath-and-body' %}"><img src='{% static "images/combo-10.jpg" %}' height="425px" class="d-block w-100 hoverable" alt="..."></a>
+        
+            </div>
+        </div>
+  
+        <div class="col-md-6 my-5 " >
+            <div class="card shadow-sm">
+            <a href="{% url 'filter' 'women-perfume' %}"><img src="{% static 'images/finalhomepage9.jpg' %}" height="425px" class="d-block w-100" alt="..."> </a>
+            <!-- <p class="prod2">MEN</p> -->
+            </div>
+        </div>
+    </div>
+ {% comment %} <!--card title---> {% endcomment %}
+
+ <div class="container-fluid px-0" style="width:100%;">
+  <div class="card mb-3" style="max-width: 1450px;height:400px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src='{% static "images/homepage6.jpg" %}' height="400px" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body" style="margin: 30px;">
+          <h5 class="card-title" style="font-weight: bold;text-align: center;font-size:40px;">Self Care is the</h5>
+          <h5 class="card-title" style="font-weight: bold;text-align: center;font-size:40px;">new going out.</h5>
+          <p class="card-text" style="font-size: 25px;font-family: poppins;margin-left:10px;"> Indulge your skin with our luxurious body care products, because your body deserves the best. Pamper yourself from head to toe with our nourishing formulas for radiant, healthy-looking skin.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <br>
+    <h2 class="my-3 text-center my-2" style="font-size: 70px;font-family:cursive;">Products</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        
+        <div class="col-md-4 my-5">
+            <div class="card shadow-sm ">
+            <a href="{% url 'filter' 'women-mist' %}"><img src='{% static "images/mist-3.jpg" %}' class="d-block w-100 " alt="..."></a>
+            <!-- <p class="prod2">Women</p> -->
+            </div>
+        </div>
+
+        <div class="col-md-4 my-5">
+            <div class="card shadow-sm">
+              <a href="{% url 'filter' 'moisturizer' %}"><img src='{% static "images/moisturizer8.jpg" %}' class="d-block w-100" alt="..."></a>
+            <!-- <p class="prod2">Women</p> -->
+            </div>
+        </div>
+
+        <div class="col-md-4 my-5 ">
+            <div class="card shadow-sm">
+            <a href="{% url 'filter' 'bath-and-body' %}"><img src="{% static 'images/showergel-5.jpg' %}" class="d-block w-100" alt="..."></a> 
+            <!-- <p class="prod2">MEN</p> -->
+            </div>
+        </div>
+    </div>
+    <br>
+    <h2 class="my-3 text-center my-2" style="font-size: 70px;font-family:cursive;">Combos</h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        
+        <div class="col-md-4 my-5">
+            <div class="card shadow-sm ">
+            <a href="{% url 'filter' 'women-perfume' %}"><img src='{% static "images/combo-2.jpg" %}' height="420px" class="d-block w-100 " alt="..."></a>
+            <!-- <p class="prod2">Women</p> -->
+            </div>
+        </div>
+
+        <div class="col-md-4 my-5">
+            <div class="card shadow-sm">
+              <a href="{% url 'filter' 'women-mist' %}"><img src='{% static "images/combo-6.jpg" %}' height="420px" class="d-block w-100" alt="..."></a>
+            <!-- <p class="prod2">Women</p> -->
+            </div>
+        </div>
+
+        <div class="col-md-4 my-5 ">
+            <div class="card shadow-sm">
+            <a href="{% url 'filter' 'combos' %}"><img src="{% static 'images/combo-8.jpg' %}" height="420px"class="d-block w-100" alt="..."></a> 
+            <!-- <p class="prod2">MEN</p> -->
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- advertisement -->
+  <div class="advertisement">
+    <img src="{% static 'images/homeadvert.jpg' %}" width="100%" alt="...">
+  </div>
+  
+  <!-- album -->
+  
+  <div class="container my-5">
+    <h2 class="my-3 text-center my-2" style="font-size: 50px;font-family:cursive;"> Trending This Week </h2>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 my-3">
+      {% for item in trend_view %}
+      <div class="col-2">
+        <div class="card shadow-sm">
+          <img src="/static/{{item.image}}" class="d-block w-100" alt="..." height="250"> 
+          <div class="card-body">
+            <!-- <h3 class="card-text">{{item.title}}</h3> -->
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <a  href="{{item.get_absolute_url}}" class="btn bg-color-btn">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     {% endfor %}
+    </div>
+  </div>
+  
+  <!-- New Section  -->
+  <div class="container container2">
+    <div class="container text-dark pt-3" style="background-color: rgb(242, 226, 229);border-radius: 45px 0 45px 0;">
+      <header class="pt-4 pb-3">
+        <h3 style="font-size: 40px; text-align: center ;">Why choose us</h3>
+      </header>
+      <div class="row mb-4">
+        <div class="col-lg-4 col-md-6">
+          <figure class="d-flex align-items-center mb-4">
+            <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+              <i class="icon_navbar bi bi-coin bi--lg text-black  floating"></i>
+            </span>
+            <figcaption class="info">
+              <h6 class="title">Reasonable prices</h6>
+              <p>Reasonable prices strike a balance between affordability for consumers and profitability for businesses, fostering economic fairness and sustainability.</p>
+            </figcaption>
+          </figure>
+          <!-- itemside // -->
+        </div>
+        <!-- col // -->
+        <div class="col-lg-4 col-md-6">
+          <figure class="d-flex align-items-center mb-4">
+            <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+              <i class="icon_navbar bi bi-hand-thumbs-up-fill  text-black  floating"></i>
+            </span>
+            <figcaption class="info">
+              <h6 class="title">Best quality</h6>
+              <p>Best quality signifies excellence in products or services, embodying superior craftsmanship, reliability, and customer satisfaction. </p>
+            </figcaption>
+          </figure>
+          <!-- itemside // -->
+        </div>
+        <!-- col // -->
+        <div class="col-lg-4 col-md-6">
+          <figure class="d-flex align-items-center mb-4">
+            <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+              <i class="icon_navbar bi bi-globe-americas text-black  floating"></i>
+            </span>
+            <figcaption class="info">
+              <h6 class="title">Worldwide shipping</h6>
+              <p>
+                Worldwide shipping offers global accessibility, ensuring products can reach customers around the globe with convenience and efficiency.</p>
+            </figcaption>
+          </figure>
+          <!-- itemside // -->
+        </div>
+        <!-- col // -->
+        <div class="col-lg-4 col-md-6">
+          <figure class="d-flex align-items-center mb-4">
+            <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+              <i class=" icon_navbar bi bi-person-fill-check text-black  floating"></i>
+            </span>
+            <figcaption class="info">
+              <h6 class="title">Customer satisfaction</h6>
+              <p>Customer satisfaction is the ultimate measure of a business's success, reflecting the ability to meet and exceed customer expectations, fostering loyalty and trust.</p>
+            </figcaption>
+          </figure>
+          <!-- itemside // -->
+        </div>
+        <!-- col // -->
+        <div class="col-lg-4 col-md-6">
+          <figure class="d-flex align-items-center mb-4">
+            <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+              <i class="icon_navbar bi bi-emoji-laughing text-black  floating"></i>
+            </span>
+            <figcaption class="info">
+              <h6 class="title">Happy customers</h6>
+              <p>A happy customer is not just a transaction but a testament to a business's ability to deliver value, service, and exceed expectations.</p>
+            </figcaption>
+          </figure>
+          <!-- itemside // -->
+        </div>
+        <!-- col // -->
+        <div class="col-lg-4 col-md-6">
+          <figure class="d-flex align-items-center mb-4">
+            <span class="rounded-circle bg-white p-3 d-flex me-2 mb-2">
+              <i class="icon_navbar bi bi-inboxes text-black  floating"></i>
+            </span>
+            <figcaption class="info">
+              <h6 class="title">thousand Items</h6>
+              <p>A thousand items provide a diverse selection, catering to a wide range of preferences and needs for customers.</p>
+            </figcaption>
+          </figure>
+          <!-- itemside // -->
+        </div>
+        <!-- col // -->
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
